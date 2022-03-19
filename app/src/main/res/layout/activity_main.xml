@@ -4,17 +4,74 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/github_bg">
+    android:background="@color/github_bg"
+    tools:context=".ui.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/github_tx_sc"
+            app:boxBackgroundColor="@color/github_bg"
+            app:boxStrokeColor="@color/github_bt"
+            app:hintTextColor="@color/github_tx_pm"
+            app:placeholderTextColor="@color/github_tx_pm">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ti_edit_query"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/input_search"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/github_tx_pm"
+                android:textColorHint="@color/github_tx_sc" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/iv_search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/search_button"
+            android:src="@drawable/ic_baseline_search_24" />
+
+    </FrameLayout>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_user"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:id="@+id/rv_user"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:listitem="@layout/item_row_user"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+        tools:listitem="@layout/item_row_user" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+        android:visibility="gone"
+        android:indeterminateTint="@color/github_tx_pm"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

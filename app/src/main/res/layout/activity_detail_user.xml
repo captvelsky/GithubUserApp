@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailUserActivity"
-    android:padding="16dp"
+    tools:context=".ui.DetailUserActivity"
     android:background="@color/github_bg">
 
         <ImageView
             android:id="@+id/img_user_avatar"
             android:layout_width="64dp"
             android:layout_height="64dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:src="@tools:sample/avatars"
@@ -24,7 +24,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="16dp"
             android:textColor="@color/github_tx_pm"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -37,7 +37,7 @@
             android:id="@+id/tv_user_username"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="16dp"
             android:textColor="@color/github_tx_sc"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="@+id/img_user_avatar"
@@ -69,34 +69,12 @@
         android:textColor="@color/github_tx_pm"/>
 
     <ImageView
-        android:id="@+id/img_user_company"
+        android:id="@+id/img_user_followers"
         android:layout_width="16dp"
         android:layout_height="16dp"
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="@id/img_user_location"
         app:layout_constraintTop_toBottomOf="@id/img_user_location"
-        android:src="@drawable/ic_baseline_business_24"
-        android:contentDescription="@string/company_png"/>
-
-    <TextView
-        android:id="@+id/tv_user_company"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toBottomOf="@id/img_user_company"
-        app:layout_constraintStart_toEndOf="@id/img_user_company"
-        app:layout_constraintTop_toTopOf="@id/img_user_company"
-        tools:text="@string/company_placeholder"
-        android:textSize="14sp"
-        android:textColor="@color/github_tx_pm"/>
-
-    <ImageView
-        android:id="@+id/img_user_followers"
-        android:layout_width="16dp"
-        android:layout_height="16dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@id/img_user_company"
-        app:layout_constraintTop_toBottomOf="@id/img_user_company"
         android:src="@drawable/ic_baseline_person_24"
         android:contentDescription="@string/followers_png"/>
 
@@ -160,9 +138,10 @@
     <Button
         android:id="@+id/btn_repository"
         style="@style/button"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp"
         android:text="@string/follow"
         android:textAlignment="center"
         android:textColor="@color/github_tx_sc"
@@ -173,5 +152,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_user_repository" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/github_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_repository"
+        app:tabIndicatorColor="@color/github_tx_pm"
+        app:tabTextColor="@color/github_tx_pm" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab_layout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
