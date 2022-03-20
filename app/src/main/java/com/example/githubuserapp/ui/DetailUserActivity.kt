@@ -2,6 +2,7 @@ package com.example.githubuserapp.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.annotation.StringRes
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.ViewPager2
@@ -28,6 +29,7 @@ class DetailUserActivity : AppCompatActivity() {
         val bundle = Bundle()
         bundle.putString(EXTRA_USERNAME, username)
 
+        showLoading(true)
         viewModel = ViewModelProvider(
             this,
             ViewModelProvider.NewInstanceFactory()
@@ -35,6 +37,7 @@ class DetailUserActivity : AppCompatActivity() {
         viewModel.setUserDetail(username.toString())
         viewModel.getUserDetail().observe(this) {
             if (it != null) {
+                showLoading(false)
                 binding.apply {
                     Glide.with(this@DetailUserActivity)
                         .load(it.avatar_url)
@@ -57,6 +60,14 @@ class DetailUserActivity : AppCompatActivity() {
             tab.text = resources.getString(TAB_TITLES[position])
         }.attach()
 
+    }
+
+    private fun showLoading(state: Boolean) {
+        if (state) {
+            binding.progressBar2.visibility = View.VISIBLE
+        } else {
+            binding.progressBar2.visibility = View.GONE
+        }
     }
 
     companion object {

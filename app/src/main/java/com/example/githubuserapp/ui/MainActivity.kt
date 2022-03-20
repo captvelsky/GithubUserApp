@@ -46,6 +46,7 @@ class MainActivity : AppCompatActivity() {
 
             ivSearchBtn.setOnClickListener {
                 searchUser()
+                showLoading(true)
             }
 
             tiEditQuery.setOnKeyListener { _, i, keyEvent ->
@@ -76,7 +77,9 @@ class MainActivity : AppCompatActivity() {
     private fun searchUser() {
         binding.apply {
             val query = tiEditQuery.text.toString()
-            if (query.isEmpty()) return showLoading(true)
+            if (query.isEmpty()) {
+                return showLoading(true)
+            }
             viewModel.setSearchUsers(query)
         }
     }
