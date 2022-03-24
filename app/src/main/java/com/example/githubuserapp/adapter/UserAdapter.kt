@@ -2,6 +2,7 @@ package com.example.githubuserapp.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.githubuserapp.data.User
@@ -9,7 +10,7 @@ import com.example.githubuserapp.databinding.ItemRowUserBinding
 
 class UserAdapter : RecyclerView.Adapter<UserAdapter.ListViewHolder>() {
 
-    private val listUser = ArrayList<User>()
+    private var listUser = ArrayList<User>()
     private var onItemClickCallback: OnItemClickCallback? = null
 
     fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
@@ -43,9 +44,10 @@ class UserAdapter : RecyclerView.Adapter<UserAdapter.ListViewHolder>() {
     }
 
     fun setUserList(users: ArrayList<User>) {
-        listUser.clear()
-        listUser.addAll(users)
-        notifyDataSetChanged()
+        val diffUtils = AdapterDiffUtils(listUser, users)
+        val diff = DiffUtil.calculateDiff(diffUtils)
+        listUser = users
+        diff.dispatchUpdatesTo(this)
     }
 
     override fun getItemCount(): Int = listUser.size

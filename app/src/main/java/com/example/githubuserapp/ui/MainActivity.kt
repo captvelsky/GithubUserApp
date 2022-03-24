@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.title = "Github"
 
         adapter = UserAdapter()
-        adapter.notifyDataSetChanged()
         adapter.setOnItemClickCallback(object : UserAdapter.OnItemClickCallback {
             override fun onItemClicked(data: User) {
                 Intent(this@MainActivity, DetailUserActivity::class.java).also {

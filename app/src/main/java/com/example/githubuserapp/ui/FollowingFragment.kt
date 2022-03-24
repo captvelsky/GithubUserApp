@@ -24,7 +24,6 @@ class FollowingFragment : Fragment(R.layout.fragment_follow) {
         _binding = FragmentFollowBinding.bind(view)
 
         adapter = UserAdapter()
-        adapter.notifyDataSetChanged()
 
         binding.apply {
             rvUser.setHasFixedSize(true)
@@ -49,7 +48,7 @@ class FollowingFragment : Fragment(R.layout.fragment_follow) {
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding == null
+        _binding = null
     }
 
     private fun showLoading(state: Boolean) {
