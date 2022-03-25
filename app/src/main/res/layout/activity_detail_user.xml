@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.DetailUserActivity"
-    android:background="@color/github_bg">
+    tools:context=".ui.DetailUserActivity">
 
         <ImageView
             android:id="@+id/img_user_avatar"
@@ -25,7 +24,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:textColor="@color/github_tx_pm"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -38,7 +36,6 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            android:textColor="@color/github_tx_sc"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="@+id/img_user_avatar"
             app:layout_constraintEnd_toEndOf="parent"
@@ -65,8 +62,7 @@
         app:layout_constraintStart_toEndOf="@id/img_user_location"
         app:layout_constraintTop_toTopOf="@+id/img_user_location"
         tools:text="@string/location_placeholder"
-        android:textSize="14sp"
-        android:textColor="@color/github_tx_pm"/>
+        android:textSize="14sp"/>
 
     <ImageView
         android:id="@+id/img_user_followers"
@@ -87,8 +83,7 @@
         app:layout_constraintStart_toEndOf="@id/img_user_followers"
         app:layout_constraintTop_toTopOf="@id/img_user_followers"
         tools:text="followers"
-        android:textSize="14sp"
-        android:textColor="@color/github_tx_pm"/>
+        android:textSize="14sp"/>
 
     <ImageView
         android:id="@+id/img_user_following"
@@ -106,7 +101,6 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:textColor="@color/github_tx_pm"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/tv_user_followers"
         app:layout_constraintStart_toEndOf="@id/img_user_following"
@@ -128,7 +122,6 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:textColor="@color/github_tx_pm"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/img_user_repository"
         app:layout_constraintStart_toEndOf="@+id/img_user_repository"
@@ -144,11 +137,9 @@
         android:layout_marginHorizontal="16dp"
         android:text="@string/follow"
         android:textAlignment="center"
-        android:textColor="@color/github_tx_sc"
         app:icon="@drawable/ic_baseline_add_24"
         app:iconGravity="textStart"
         app:iconSize="16dp"
-        app:iconTint="@color/github_tx_sc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_user_repository" />
@@ -158,12 +149,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:background="@color/github_bg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_repository"
-        app:tabIndicatorColor="@color/github_tx_pm"
-        app:tabTextColor="@color/github_tx_pm" />
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager"
@@ -182,7 +171,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:indeterminateTint="@color/github_tx_pm"
         android:visibility="gone"/>
 
+    <ToggleButton
+        android:id="@+id/favoriteButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/favorite"
+        android:textOff=''
+        android:textOn=''
+        android:focusable="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+<!---->
 </androidx.constraintlayout.widget.ConstraintLayout>

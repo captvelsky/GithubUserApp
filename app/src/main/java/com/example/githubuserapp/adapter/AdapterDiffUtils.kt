@@ -6,10 +6,9 @@ import com.example.githubuserapp.data.User
 class AdapterDiffUtils(
     private val oldList: ArrayList<User>,
     private val newList: ArrayList<User>
-    ): DiffUtil.Callback() {
+) : DiffUtil.Callback() {
 
     override fun getOldListSize(): Int = oldList.size
-
     override fun getNewListSize(): Int = newList.size
 
     override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {

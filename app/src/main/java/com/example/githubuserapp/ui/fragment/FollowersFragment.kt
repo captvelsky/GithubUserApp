@@ -1,4 +1,4 @@
-package com.example.githubuserapp.ui
+package com.example.githubuserapp.ui.fragment
 
 import android.os.Bundle
 import android.view.View
@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.githubuserapp.R
 import com.example.githubuserapp.adapter.UserAdapter
 import com.example.githubuserapp.databinding.FragmentFollowBinding
+import com.example.githubuserapp.ui.DetailUserActivity
+import com.example.githubuserapp.ui.model.FollowersViewModel
 
 class FollowersFragment : Fragment(R.layout.fragment_follow) {
 
@@ -43,7 +45,6 @@ class FollowersFragment : Fragment(R.layout.fragment_follow) {
                 showLoading(false)
             }
         }
-
     }
 
     override fun onDestroyView() {

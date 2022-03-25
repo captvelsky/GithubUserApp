@@ -4,19 +4,25 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2025" />
+        <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/drawable/favorite.xml" value="0.197" />
         <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.204" />
         <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/drawable/ic_baseline_business_24.xml" value="0.1" />
         <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/drawable/ic_baseline_business_24_white.xml" value="0.1" />
+        <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.1" />
         <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/drawable/ic_baseline_following_24.xml" value="0.1" />
         <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/drawable/ic_baseline_location_on_24.xml" value="0.204" />
         <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.204" />
         <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/drawable/ic_baseline_repositories_24.xml" value="0.204" />
         <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.2025" />
         <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2025" />
-        <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/layout/activity_detail_user.xml" value="0.25" />
-        <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/layout/activity_main.xml" value="0.2674825174825175" />
+        <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/layout/activity_detail_user.xml" value="0.48703703703703705" />
+        <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/layout/activity_favorite.xml" value="0.1" />
+        <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/layout/activity_setting.xml" value="0.33" />
         <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/layout/fragment_follow.xml" value="0.18070652173913043" />
         <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/layout/item_row_user.xml" value="0.33" />
+        <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/menu/option_menu.xml" value="0.33" />
+        <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/xml/preferences.xml" value="0.17074275362318841" />
       </map>
     </option>
   </component>
