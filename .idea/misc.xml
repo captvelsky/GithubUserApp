@@ -9,12 +9,18 @@
         <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/drawable/ic_baseline_business_24.xml" value="0.1" />
         <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/drawable/ic_baseline_business_24_white.xml" value="0.1" />
         <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.1" />
+        <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/drawable/ic_baseline_favorite_black_24.xml" value="0.1485" />
+        <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/drawable/ic_baseline_favorite_white_24.xml" value="0.1485" />
         <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/drawable/ic_baseline_following_24.xml" value="0.1" />
         <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/drawable/ic_baseline_location_on_24.xml" value="0.204" />
         <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.204" />
         <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/drawable/ic_baseline_repositories_24.xml" value="0.204" />
         <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.2025" />
+        <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/drawable/ic_baseline_settings_black_24.xml" value="0.1" />
+        <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/drawable/ic_baseline_settings_white_24.xml" value="0.1485" />
+        <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/drawable/ic_baseline_unfavorite_24.xml" value="0.1485" />
         <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2025" />
+        <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/drawable/toggle_button.xml" value="0.2115" />
         <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/layout/activity_detail_user.xml" value="0.48703703703703705" />
         <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/layout/activity_favorite.xml" value="0.1" />
         <entry key="..\:/Bangkit/GithubUserApp/app/src/main/res/layout/activity_main.xml" value="0.25" />

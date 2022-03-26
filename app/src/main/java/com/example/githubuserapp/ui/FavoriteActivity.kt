@@ -33,7 +33,8 @@ class FavoriteActivity : AppCompatActivity() {
                 }
             }
         })
-        viewModel = ViewModelProvider(this).get(FavoriteViewModel::class.java)
+
+        viewModel = ViewModelProvider(this)[FavoriteViewModel::class.java]
 
         binding.apply {
             rvUser.layoutManager = LinearLayoutManager(this@FavoriteActivity)

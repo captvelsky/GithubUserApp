@@ -5,10 +5,10 @@
         android:id="@+id/favoriteMenu"
         android:icon="@drawable/ic_baseline_favorite_white_24"
         android:title="@string/favorite"
-        app:showAsAction="always" />
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/settingMenu"
-        android:icon="@drawable/ic_baseline_settings_white_24"
+        android:icon="@drawable/ic_baseline_settings_24"
         android:title="@string/settings"
         app:showAsAction="always"/>
 </menu>

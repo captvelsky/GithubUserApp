@@ -22,7 +22,6 @@ class DetailUserViewModel(application: Application) : AndroidViewModel(applicati
     private var userDatabase: UserDatabase? = UserDatabase.getDatabase(application)
     private var userDao: UserDao? = userDatabase?.userDao()
 
-
     fun setUserDetail(username: String) {
         ApiConfig.getApiService().getUserDetail(username)
             .enqueue(object : Callback<DetailUserResponse> {
@@ -58,7 +57,7 @@ class DetailUserViewModel(application: Application) : AndroidViewModel(applicati
         }
     }
 
-    suspend fun checkUser(id: Int) = userDao?.isFavoriteUser(id)
+    suspend fun isFavorite(id: Int) = userDao?.isFavoriteUser(id)
 
     companion object {
         private const val TAG = "MainActivity"

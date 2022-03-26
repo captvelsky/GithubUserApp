@@ -17,7 +17,7 @@ class UserAdapter : RecyclerView.Adapter<UserAdapter.ListViewHolder>() {
         this.onItemClickCallback = onItemClickCallback
     }
 
-    inner class ListViewHolder(val binding: ItemRowUserBinding) :
+    inner class ListViewHolder(private val binding: ItemRowUserBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(user: User) {
@@ -44,7 +44,7 @@ class UserAdapter : RecyclerView.Adapter<UserAdapter.ListViewHolder>() {
     }
 
     fun setUserList(users: ArrayList<User>) {
-        val diffUtils = AdapterDiffUtils(listUser, users)
+        val diffUtils = AdapterDiff(listUser, users)
         val diff = DiffUtil.calculateDiff(diffUtils)
         listUser = users
         diff.dispatchUpdatesTo(this)

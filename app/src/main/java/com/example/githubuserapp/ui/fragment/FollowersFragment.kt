@@ -37,7 +37,7 @@ class FollowersFragment : Fragment(R.layout.fragment_follow) {
         viewModel = ViewModelProvider(
             this,
             ViewModelProvider.NewInstanceFactory()
-        ).get(FollowersViewModel::class.java)
+        )[FollowersViewModel::class.java]
         viewModel.setListFollowers(username)
         viewModel.getListFollowers().observe(viewLifecycleOwner) {
             if (it != null) {

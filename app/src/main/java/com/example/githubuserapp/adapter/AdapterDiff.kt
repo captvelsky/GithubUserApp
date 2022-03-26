@@ -3,7 +3,7 @@ package com.example.githubuserapp.adapter
 import androidx.recyclerview.widget.DiffUtil
 import com.example.githubuserapp.data.User
 
-class AdapterDiffUtils(
+class AdapterDiff(
     private val oldList: ArrayList<User>,
     private val newList: ArrayList<User>
 ) : DiffUtil.Callback() {

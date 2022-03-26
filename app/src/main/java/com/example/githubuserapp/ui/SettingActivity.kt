@@ -28,9 +28,8 @@ class SettingActivity : AppCompatActivity() {
 
         val switchTheme = findViewById<SwitchMaterial>(R.id.switchTheme)
         val pref = SettingPreferences.getInstance(dataStore)
-        val settingViewModel = ViewModelProvider(this, SettingModelFactory(pref)).get(
-            SettingViewModel::class.java
-        )
+        val settingViewModel =
+            ViewModelProvider(this, SettingModelFactory(pref))[SettingViewModel::class.java]
 
         settingViewModel.getThemeSettings().observe(
             this

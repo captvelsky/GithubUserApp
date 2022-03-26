@@ -39,7 +39,7 @@ class DetailUserActivity : AppCompatActivity() {
         bundle.putString(EXTRA_USERNAME, username)
         showLoading(true)
 
-        viewModel = ViewModelProvider(this).get(DetailUserViewModel::class.java)
+        viewModel = ViewModelProvider(this)[DetailUserViewModel::class.java]
         viewModel.setUserDetail(username.toString())
         viewModel.getUserDetail().observe(this) {
             if (it != null) {
@@ -59,7 +59,7 @@ class DetailUserActivity : AppCompatActivity() {
         }
 
         viewModel.viewModelScope.launch {
-            val count = viewModel.checkUser(id)
+            val count = viewModel.isFavorite(id)
             if (count != null) {
                 if (count > 0) {
                     binding.favoriteButton.isChecked = true
@@ -73,12 +73,12 @@ class DetailUserActivity : AppCompatActivity() {
 
         binding.apply {
             favoriteButton.setOnClickListener {
-                if (isChecked) {
+                isChecked = if (isChecked) {
                     viewModel.deleteFavorite(id)
-                    isChecked = !isChecked
+                    !isChecked
                 } else {
                     viewModel.addFavorite(id, username.toString(), avatarUrl.toString())
-                    isChecked = !isChecked
+                    !isChecked
                 }
                 favoriteButton.isChecked = isChecked
             }

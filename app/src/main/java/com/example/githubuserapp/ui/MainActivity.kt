@@ -37,12 +37,12 @@ class MainActivity : AppCompatActivity() {
                     startActivity(it)
                 }
             }
-
         })
+
         viewModel = ViewModelProvider(
             this,
             ViewModelProvider.NewInstanceFactory()
-        ).get(MainViewModel::class.java)
+        )[MainViewModel::class.java]
 
         binding.apply {
             rvUser.layoutManager = LinearLayoutManager(this@MainActivity)
@@ -63,6 +63,7 @@ class MainActivity : AppCompatActivity() {
                 return@setOnKeyListener false
             }
         }
+
         viewModel.getSearchUsers().observe(this) {
             if (it != null) {
                 showLoading(false)
